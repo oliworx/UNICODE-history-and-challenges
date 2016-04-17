@@ -1,0 +1,94 @@
+% Kompilieren mit TeXworks/ XeLaTeX
+\documentclass[12pt,german,a4paper]{scrartcl}
+
+% Abstand des Textes vom Rand sollte sich an folgenden Richtwerten orientieren: 
+%     a.  Oben: 3 cm, Seitenzahl steht 1,5 cm von der oberen Papierkante 
+%     b.  Unten: 2 cm (letzte Zeile der letzten Fußnote bis untere Papierkante) 
+%     c.  Links: 4 cm 
+%     d.  Rechts: 2 cm  
+%
+% Mit  Ausnahme  des  Titelblatts  sind  alle  Seiten  der  Arbeit  fortlaufend  innerhalb 
+% der  oberen  Kopfzeile  zu  nummerieren.  Dabei  sind,  beginnend  mit  der  ersten 
+% Seite  des  Inhaltsverzeichnisses, sämtliche  Verzeichnisse  vor  dem  Textteil  mit 
+% römischen  Ziffern  fortlaufend  durchzunummerieren.  Beginnend  mit  der  ersten 
+% Seite des Textteils werden alle Seiten – mit Ausnahme der ehrenwörtlichen Er-
+% klärung – mit arabischen Ziffern fortlaufend nummeriert (neu beginnend mit „1“). 
+
+\usepackage[left=4cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+
+% Seitenzahlen oben zentriert
+\usepackage{scrpage2} 
+\clearscrheadfoot 
+\chead[\pagemark]{ \pagemark} 
+\pagestyle{scrheadings} 
+
+% deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+% wegen deutschen Umlauten
+\usepackage[ansinew]{inputenc}
+
+% 1,5-zeilig
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{color}
+
+% für Code-Listings
+\usepackage{listings}
+\lstset{
+    keywordstyle=\color{black}
+  , language = SQL
+  , basicstyle=\ttfamily\singlespacing\scriptsize,
+  , columns=flexible 
+  , keepspaces=true,
+  , morekeywords = {EXPLAIN, UNSIGNED, ENGINE, AUTO_INCREMENT, LOAD, DATA, INFILE}
+  , showstringspaces=false
+  } 
+
+% Für Abstand um die Überschriften
+\usepackage{titlesec}
+% kleinerer Abstand um die Überschriften
+% \titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+% \titlespacing\subsection{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+% \titlespacing\subsubsection{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+
+\usepackage{xltxtra} 
+\newfontfamily\CN{SimSun}
+
+% fuer Zitate
+% \usepackage[round]{natbib}
+
+% Abkürzungsverzeichnis
+\usepackage{acronym}
+
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{color}
+
+\setlist{nolistsep,partopsep=0pt}
+
+\setlength{\parindent}{0pt} % keine Einrückung bei Absätzen
+% \setlength{\parskip}{\baselineskip} % Abstand zwischen Absätzen
+\setlist{nolistsep} % kein Abstand bei Listen zwischen den Items
+%\renewcommand{\familydefault}{\sfdefault} % Schriftfamilie
+
+
+\addtokomafont{sectioning}{\rmfamily}
+
+% hier beginnt das Dokument
+\begin{document}
+
+% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
+\bibliographystyle{alphadin}
+
+\input{titelblatt}
+\input{verzeichnisse}
+\input{text}
+\input{anhang}
+\input{literatur}
+\input{ehrenwort}
+
+\end{document}

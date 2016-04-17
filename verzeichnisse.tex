@@ -1,0 +1,55 @@
+%Verzeichnisse
+
+% vor dem Hauptteil römische Seitenzahlen verwenden
+\pagenumbering{Roman}
+\newpage
+% dies ist die erste Seite bezüglich der Seitenzahlen
+\setcounter{page}{1}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% Abkürzungsverzeichnis
+\phantomsection \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\section*{Abkürzungsverzeichnis}
+\begin{acronym}[Xerox PARC] % für die Ausrichtung die längste Abk. hier in eckigen Klammern
+ \acro{ASA}{American Standards Association, Vorläuferorganisation von ANSI}
+ \acro{ANSI}{American National Standards Institute}
+ \acro{Big5}{Zeichenkodierung für traditionelle chinesische Schriftzeichen, entwickelt von den 5 größten Computerfirmen Taiwans}
+ \acro{BOM}{Byte Order Mark}
+ \acro{BMP}{Basic Multilingual Plane, Mehrsprachige Basis-Ebene, Ebene 0 der Unicode-Zeichen}
+ \acro{CJK}{Chinesisch, Japanisch, und Koreanisch: Sprachen mit Zeichen chinesischen Ursprungs}
+ \acro{CJKV}{Chinesisch, Japanisch, Koreanisch, und (historische) Vietnamesische Schrift}
+ \acro{DBCS}{Double Byte Character Set - Klasse von Zeichensätzen mit Ein- und Zweibyte-Zeichen}
+ \acro{ECMA}{European Computer Manufacturers Association, Verband europäischer Computerhersteller}
+ \acro{GB2312}{Guojia Biaozhun, nationaler Standard in China, Zeichensatz für vereinfachte chinesische Schriftzeichen}
+ \acro{GB18030}{Guojia Biaozhun, nationaler Standard in China, Nachfolger von GB2312}
+ \acro{IDN}{Internationalisierter Domainname, Domainname mit Nicht-ASCII-Zeichen}
+ \acro{IEC}{International Electrotechnical Commission, Internationale Elektrotechnische Kommission, Normungsorganisation für Elektrotechnik und Elektronik}
+ \acro{ISO}{International Organization for Standardization, Internationale Organisation für Normung}
+ \acro{PUA}{Private Use Area, privat nutzbarer Bereich}
+ \acro{PUP}{Private Use Planes, Ebenen für private Nutzung, Ebenen 15 und 16 von Unicode}
+ \acro{SIP}{Supplementary Ideographic Plane, Ergänzende ideographische Ebene, Ebene 2 und 3 der Unicode-Zeichen}
+ \acro{SMP}{Supplementary Multilingual Plane, Ergänzende mehrsprachige Ebene, Ebene 1 der Unicode-Zeichen}
+ \acro{SSP}{Supplementary Special-purpose Plane, Ergänzende Ebene für spezielle Verwendungen, Ebene 14 der Unicode-Zeichen}
+ \acro{UCS}{Universal Character Set, in ISO/IEC 10646 spezifizierte Norm}
+ \acro{UCS-2}{Universal Character Set, Kodierung in 2 Byte}
+ \acro{UCS-4}{Universal Character Set, Kodierung in 4 Byte}
+ \acro{UTF-16}{Unicode Transformation Format 16 bit}
+ \acro{UTS}{Unicode Technical Standard, vom Unicode Consortium veröffentlichte Spezifikation}
+ \acro{Xerox PARC}{Xerox Palo Alto Research Center, Forschungszentrum der Firma Xerox im kalifornischen Palo Alto}
+
+\end{acronym}
+
+% ggf. Abbildungsverzeichnis auf eine neue Seite
+ \newpage 
+ \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+ \listoffigures
+
+% ggf. Tabellenverzeichnis
+% \addcontentsline{toc}{section}{Tabellenverzeichnis}
+% \listoftables
+
+\newpage
+\pagenumbering{arabic}
