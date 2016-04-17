@@ -1,15 +1,16 @@
 Unicode - history and contemporary challenges
 =============================================
 
-project paper / Seminararbeit: Unicode - Geschichte und aktuelle Herausforderungen
+project paper / Seminararbeit: _Unicode - Geschichte und aktuelle Herausforderungen_
 
 Date: 2015-01-31
 
 Language: German
 
-Download PDF: 
-https://www.kurmis.com/files/unicode.pdf or 
-https://github.com/oliworx/UNICODE-history-and-challenges/raw/master/unicode.pdf
+Download PDF:
+ 
+ * https://www.kurmis.com/files/unicode.pdf or 
+ * https://github.com/oliworx/UNICODE-history-and-challenges/raw/master/unicode.pdf
 
 Mit der zunehmenden Globalisierung und der umfassenden Ausbreitung des 
 Internets bekommt der internationale Austausch von Informationen immer 
